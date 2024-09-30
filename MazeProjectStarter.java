@@ -34,7 +34,6 @@ public class MazeProjectStarter extends JPanel implements KeyListener, ActionLis
 		t.start();
 	}
 
-	// All Graphics handled in this method.  Don't do calculations here
 	public void paintComponent(Graphics g)
 	{
 		super.paintComponent(g);
@@ -46,7 +45,6 @@ public class MazeProjectStarter extends JPanel implements KeyListener, ActionLis
 			int size3D = 600, backWall = 350;
 			int ULC = 100, LRC = ULC + size3D;
 			int shrink = (size3D - backWall)/5;
-			//int BLC
 
 			//left wall
 			for(int n = 0; n < 5; n++){
@@ -151,8 +149,6 @@ public class MazeProjectStarter extends JPanel implements KeyListener, ActionLis
 		}
 
 	public void setBoard(String fileName){
-		//replace this code with load from file
-		//make sure all rows have same number of cols
 		ArrayList<String> lineReader = new ArrayList<String>();
 		try{
 			File file = new File(fileName);
